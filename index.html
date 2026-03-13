@@ -1,78 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto1 página Responsive</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Pixel Buds Pro</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <header>
-        <div class="logo"><img src="imgs/googlelogo.png" width=10% alt="logo Icono Google"></div>
-        <nav id="menu">
-            <ul>
-                <li><a href="iphones.html">Iphones</a></li>
-                <li><a href="escritorio.html">Escritorio</a></li>
-                <li><a href="watches.html">Watches</a></li>
-                <li><a href="smartphone.html">Smartphone</a></li>
-                <li><a href="accesorios.html">Accesorios</a></li>
-            </ul>
-        </nav>
-
-
-        <div id="iconos">
-            <a href="#"><img src="imgs/buscarlupa.png" width=10% alt="carrito"></a>
-            <a href="#"><img src="imgs/infointerrogacion.png" width=10% alt="informacion"></a>
-            <a href="#"><img src="imgs/carrito.png" width=10% alt="carrito"></a>
-            <a href="#"><img src="imgs/usuario.png" width=10% alt="usuario"></a>
+  <header class="header">
+    <nav class="nav">
+      <img src="images/google-logo.png" alt="Google Store Logo" />
+      <a href="#">Phones</a>
+      <a href="index.html">Earbuds</a>
+      <a href="pages/watch.html">Watches</a>
+      <a href="#">Smart Home</a>
+      <a href="#">Accesories</a>
+      <a href="#">Subscriptions</a>
+    </nav>
+    <div class="header-icons">
+      <img src="images/icons/Search.svg" alt="Search Icon" />
+      <img src="images/icons/Help.svg" alt="Help Icon" />
+      <img src="images/icons/Cart.svg" alt="Cart Icon" />
+      <img src="images/icons/Avatar.svg" alt="Avatar Icon" />
+    </div>
+    <div class="menu-btn" id="menuBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+  <main class="product-container">
+    <section class="product-gallery">
+      <div class="product-circle">
+        <img src="images/earbuds/earbuds_01.png" alt="Pixel Buds vista frontal" />
+        <img src="images/earbuds/earbuds_02.png" alt="Pixel Buds vista lateral" />
+        <img src="images/earbuds/earbuds_03.png" alt="Pixel Buds detalle" />
+        <img src="images/earbuds/earbuds_04.png" alt="Pixel Buds en uso" />
+      </div>
+      <div class="product-big">
+        <img src="images/earbuds/earbuds_01.png" alt="Google Pixel Buds Pro" />
+      </div>
+    </section>
+    <aside class="product-info">
+      <h1>Google Pixel Buds Pro</h1>
+      <p class="category">Music & Sound</p>
+      <p class="price">229€</p>
+      <hr />
+      <div class="colors">
+        <p>Choose a color</p>
+        <div class="color-selector">
+          <button class="color-dot blue" aria-label="Blue"></button>
+          <button class="color-dot charcoal" aria-label="Charcoal"></button>
+          <button class="color-dot porcelain" aria-label="Porcelain"></button>
+          <button class="color-dot lemongrass" aria-label="Lemongrass"></button>
+          <button class="color-dot green" aria-label="Green"></button>
+          <button class="color-dot red" aria-label="Red"></button>
         </div>
-        <div class="menu-btn" id="menuBtn">
-            <span></span>
-            <span></span>
-            <span></span>
+      </div>
+      <div class="buy-box">
+        <p class="buy-price">229€</p>
+        <div class="buy-action">
+          <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <button class="add-cart">Add to Cart</button>
         </div>
-
-
-    </header>
-
-    <main>
-
-        <p> Ver producto detalles </p>
-
-        <img src="imgs/auriculares.png" alt="imagen auriculares">
-
-        <h1>Google Pixel Buds pro</h1>
-        <main class="main">
-            <!-- Ejemplo 1: Texto y espaciado en porcentaje -->
-            <section class="section">
-                <h2>229 Euros</h2><br><br>
-
-                <p>Music & Song</p><br><br>
-                <hr style="border: 1px solid rgb(87, 87, 87); width: 50%;"><br>
-                <!-- <p>texto<strong>texto</strong> Texto</p>-->
-            </section>
-
-            <!-- Ejemplo 2: Menú que se reorganiza -->
-            <section class="section">
-                <p>Choose a colour</p>
-                <img src="imgs/colores.png" alt="colores auriculares">
-
-            </section>
-
-
-
-        </main>
-
-        <script>
-            const menuBtn = document.getElementById('menuBtn');
-            const menu = document.getElementById('menu');
-
-            menuBtn.addEventListener('click', () => {
-                menu.classList.toggle('show');
-            });
-        </script>
+        <p class="delivery">
+          <span class="truck-icon"><img src="images/icons/Delivery.svg" alt="Truck Icon" /></span>
+          Delivers 29 Apr to <b class="text-blue">08023</b>
+        </p>
+      </div>
+    </aside>
+  </main>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-social">
+        <img src="images/icons/SM-x.svg" alt="SM-x Icon" />
+        <img src="images/icons/SM-instagram.svg" alt="SM-instagram Icon" />
+        <img src="images/icons/SM-facebook.svg" alt="sm-facebook Icon" />
+        <img src="images/icons/SM-youtube.svg" alt="sm-youtube Icon" />
+        <img src="images/icons/SM-tiktok.svg" alt="sm-tiktok Icon" />
+      </div>
+      <div class="footer-links">
+        <div class="footer-country">
+          <img src="images/icons/Spain.svg" alt="Spain Icon" />
+          <span>Spain</span>
+        </div>
+        <a href="#">Privacy</a>
+        <a href="#">Google Nest Commitment to Privacy</a>
+        <a href="#">Sales Terms</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>
