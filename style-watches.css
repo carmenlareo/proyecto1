@@ -57,7 +57,7 @@ body {
 
 .header-icons {
     display: flex;
-    gap: 12px;
+    gap: 18px;
     align-items: center;
 }
 
@@ -508,7 +508,7 @@ select {
     }
 
     .menu-btn {
-        padding-left: 5px;
+        padding-left: 20px;
     }
 
     .nav img {
@@ -548,19 +548,4 @@ select {
     .footer-country {
         margin-top: 10px;
     }
-
-.links_contain {
-  display: flex;
-  gap: 15px;
-  align-items: center;
 }
-
-.links_contain img {
-  width: 40px;
-  height: 40px;
-}
-
-
-
-}
-

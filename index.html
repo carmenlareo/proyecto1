@@ -10,8 +10,10 @@
 
 <body>
   <header class="header">
+    <div class="links_contain">
+        <a href="https://www.google.com" class="logo"><img src="images/google-logo.png" alt="logo"
+        /></a>
     <nav class="nav">
-      <img src="images/google-logo.png" alt="Google Store Logo" />
       <a href="#">Phones</a>
       <a href="index.html">Earbuds</a>
       <a href="pages/watch.html">Watches</a>
@@ -32,7 +34,13 @@
     </div>
   </header>
   <main class="product-container">
-    <section class="product-gallery">
+    <div class="galeria">
+      <div class="miniaturas" id="miniaturas"></div>
+      <div class="imagen-grande">
+        <img id="imagenPrincipal">
+      </div>
+    </div>
+    <!-- <section class="product-gallery"> 
       <div class="product-circle">
         <img src="images/earbuds/earbuds_01.png" alt="Pixel Buds vista frontal" />
         <img src="images/earbuds/earbuds_02.png" alt="Pixel Buds vista lateral" />
@@ -42,7 +50,7 @@
       <div class="product-big">
         <img src="images/earbuds/earbuds_01.png" alt="Google Pixel Buds Pro" />
       </div>
-    </section>
+    </section>-->
     <aside class="product-info">
       <h1>Google Pixel Buds Pro</h1>
       <p class="category">Music & Sound</p>
@@ -97,7 +105,9 @@
       </div>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="script/script-earbuds.js"></script>
+  <script src="script/script-hamburguesa.js"></script>
+ 
 </body>
 
 </html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galería lateral</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .galeria {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    /* MINIATURAS IZQUIERDA */
+    .miniaturas {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .miniaturas img {
+      width: 80px;
+      cursor: pointer;
+      border-radius: 6px;
+      opacity: 0.6;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .miniaturas img:hover {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    .miniaturas img.activa {
+      opacity: 1;
+      border: 2px solid #333;
+    }
+
+    /* IMAGEN GRANDE */
+    .imagen-grande img {
+      width: 400px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="galeria">
+  <div class="miniaturas" id="miniaturas"></div>
+  <div class="imagen-grande">
+    <img id="imagenPrincipal">
+  </div>
+</div>
+
+<script>
+  const imagenes = [
+    "https://picsum.photos/id/1015/600/400",
+    "https://picsum.photos/id/1025/600/400",
+    "https://picsum.photos/id/1035/600/400",
+    "https://picsum.photos/id/1045/600/400"
+  ];
+
+  const contMiniaturas = document.getElementById("miniaturas");
+  const imagenPrincipal = document.getElementById("imagenPrincipal");
+
+  function cargarGaleria() {
+    imagenes.forEach((src, index) => {
+      const img = document.createElement("img");
+      img.src = src;
+
+      img.addEventListener("click", () => cambiarImagen(src, img));
+
+      contMiniaturas.appendChild(img);
+
+      // Primera imagen por defecto
+      if (index === 0) {
+        imagenPrincipal.src = src;
+        img.classList.add("activa");
+      }
+    });
+  }
+
+  function cambiarImagen(src, mini) {
+    imagenPrincipal.src = src;
+
+    document.querySelectorAll(".miniaturas img").forEach(i => {
+      i.classList.remove("activa");
+    });
+
+    mini.classList.add("activa");
+  }
+
+  cargarGaleria();
+</script>
+
+</body>
+</html>
